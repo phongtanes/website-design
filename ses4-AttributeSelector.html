@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การเลือก Element ด้วย Attribute Selector</title>
+    <style>
+       img{
+        height: 230px;
+       }
+       img.pic3[alt]{
+        border: solid purple 5px;
+    }
+    h3[title~="title"]{
+        color: hotpink;
+    }
+    h3[title~="job"]{
+        font-style: italic;
+    }
+    h3[title~="joy"]{
+        text-decoration: underline;
+    }
+    p[lang|="en"]{
+        background-color: blueviolet;
+    }
+    a[href^=https]{
+        color: red;
+    }
+    </style>
+    
+</head>
+<body>
+    <n1><center>การเลือก Element ด้วย Attribute Selector</center></n1>
+    <h2 title="aTitle">ไม่มี Attribute ชื่อ title</h2>
+    <h2 title="firstTitle">มี Attribute ชื่อ title</h2>
+    <h1><center>การใช้งาน Attribute Selector</center></h1>
+    <div>
+        <article>
+            <h2>First Set</h2>
+            <img class="pic1" src="img/artwork-anime-landscape-painting-wallpaper-8b962c8d7321cf3955046b39ddaccc80.jpg" alt="lonelygirl">
+            <img class="pic2" src="img/middle-earth-shadow-of-mordor-eagle-video-games-fire-wallpaper-03f256e12ac86761b22d8efeac3d127f.jpg" alt="bravewanderer">
+            <img class="pic3" src="img/wallpaperflare.com_wallpaper (1).jpg" alt="lonelyprincess">
+        </article>
+        <hr>
+        <article>
+            <h2>First Set</h2>
+            <img class="pic4" src="img/wallpaperflare.com_wallpaper (4).jpg" alt="windfallcity">
+            <img class="pic5" src="img/wallpaperflare.com_wallpaper.jpg" alt="beautyprincess">
+            <img class="pic6" src="img/world-of-warcraft-battle-for-azeroth-video-games-warcraft-alliance-wallpaper-086b954bc6da1845f849d9255fdf6b11.jpg" alt="braveknight">
+        </article>
+    </div>
+    <h3 title="title job joy">ตัวที่ 1 ทดสอบการใช้งาน Attribute~=value </h3>
+    <h3 title="job">ตัวที่ 2 ทดสอบการใช้งาน Attribute~=value </h3>
+    <h3 title="joy">ตัวที่ 3 ทดสอบการใช้งาน Attribute~=value </h3>
+    <div>
+        <p lang="en">Hello</p>
+        <p lang="en-us">Hi</p>
+        <p lang="es">Hola</p>
+        <p lang="th">สวัสดี</p>
+    </div>
+    <h2><center>การใช้งาน Attribute^=value</center></h2>
+    <ul>
+        <li><a href="https://www.google.co.th">กูเกิ้ล</a></li>
+        <li><a href="https://www.apple.com">แอปเปิ้ล</a></li>
+        <li><a href="http://www.microsoft.com">ไมโครซอฟต์</a></li>
+    </ul>
+</body>
+</html>
